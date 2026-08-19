@@ -1,239 +1,345 @@
-Dompdf
-======
+# Smart Resume Analyzer & Job Portal
 
-[![Build Status](https://github.com/dompdf/dompdf/actions/workflows/test.yml/badge.svg)](https://github.com/dompdf/dompdf/actions/workflows/test.yml)
-[![PHP Versions Supported](https://poser.pugx.org/dompdf/dompdf/require/php)](https://packagist.org/packages/dompdf/dompdf)
-[![Latest Release](https://poser.pugx.org/dompdf/dompdf/v)](https://packagist.org/packages/dompdf/dompdf)
-[![Total Downloads](https://poser.pugx.org/dompdf/dompdf/downloads)](https://packagist.org/packages/dompdf/dompdf)
-[![License](https://poser.pugx.org/dompdf/dompdf/license)](https://packagist.org/packages/dompdf/dompdf)
- 
-**Dompdf is an HTML to PDF converter**
+An AI-powered web-based recruitment platform that connects job seekers and employers. The system allows users to create professional resumes, search and apply for jobs, while employers can post jobs and manage applicants.
 
-At its heart, dompdf is (mostly) a [CSS 2.1](http://www.w3.org/TR/CSS2/) compliant
-HTML layout and rendering engine written in PHP. It is a style-driven renderer:
-it will download and read external stylesheets, inline style tags, and the style
-attributes of individual HTML elements. It also supports most presentational
-HTML attributes.
+## 📌 Project Overview
 
-*This document applies to the latest stable code which may not reflect the current 
-release. For released code please
-[navigate to the appropriate tag](https://github.com/dompdf/dompdf/tags).*
+**Smart Resume Analyzer & Job Portal** is a database-driven web application developed as a Database Systems project.
 
-----
+The system has two main modules:
 
-**Check out the [demo](http://eclecticgeek.com/dompdf/debug.php) and ask any
-question on [StackOverflow](https://stackoverflow.com/questions/tagged/dompdf) or
-in [Discussions](https://github.com/dompdf/dompdf/discussions).**
+* **Job Seeker**
+* **Employer**
 
-Follow us on [![Twitter](http://twitter-badges.s3.amazonaws.com/twitter-a.png)](http://www.twitter.com/dompdf).
+Job seekers can create and manage their resumes, search for available jobs, analyze their resumes according to job requirements, and apply for suitable jobs.
+
+Employers can create profiles, post job vacancies, manage their jobs, and view applicants.
+
+The project also includes an **AI-based Resume Analysis** feature that compares the skills in a candidate's resume with the required skills of a job and provides a match percentage, matched skills, missing skills, and improvement suggestions.
 
 ---
 
+## ✨ Key Features
 
+### 👩‍💻 Job Seeker
 
-## Features
+* User Registration and Login
+* Profile Management
+* Resume/CV Builder
+* Multiple Resume Templates
+* Personal Information
+* Education
+* Work Experience
+* Skills
+* Projects
+* Certifications
+* Resume Preview
+* Resume PDF Generation
+* Job Search
+* Job Application
+* Application Management
+* Resume Completion Status
+* AI Resume Analysis
 
- * Handles most CSS 2.1 and a few CSS3 properties, including @import, @media &
-   @page rules
- * Supports most presentational HTML 4.0 attributes
- * Supports external stylesheets, either local or through http/ftp (via
-   fopen-wrappers)
- * Supports complex tables, including row & column spans, separate & collapsed
-   border models, individual cell styling
- * Image support (gif, png (8, 24 and 32 bit with alpha channel), bmp & jpeg)
- * No dependencies on external PDF libraries, thanks to the R&OS PDF class
- * Inline PHP support
- * Basic SVG support (see "Limitations" below)
- 
-## Requirements
+### 🏢 Employer
 
- * PHP version 7.1 or higher
- * DOM extension
- * MBString extension
- * php-font-lib
- * php-svg-lib
- 
-Note that some required dependencies may have further dependencies 
-(notably php-svg-lib requires sabberworm/php-css-parser).
+* Employer Registration and Login
+* Employer Dashboard
+* Company/Profile Management
+* Post New Jobs
+* Edit Job Posts
+* Delete Job Posts
+* Manage Job Vacancies
+* View Applicants
+* View Candidate Information and Resumes
 
-### Recommendations
+### 🤖 AI Resume Analysis
 
- * GD (for image processing)
-   * Additionally, the IMagick or GMagick extension improves image processing performance for certain image types
- * OPcache (OPcache, XCache, APC, etc.): improves performance
+The AI module analyzes a candidate's resume according to a selected job's requirements.
 
-Visit the wiki for more information:
-https://github.com/dompdf/dompdf/wiki/Requirements
+It provides:
 
-## About Fonts & Character Encoding
+* Resume-Job Match Percentage
+* Matched Skills
+* Missing Skills
+* Resume Improvement Suggestions
 
-PDF documents internally support the following fonts: Helvetica, Times-Roman,
-Courier, Zapf-Dingbats, & Symbol. These fonts only support Windows ANSI
-encoding. In order for a PDF to display characters that are not available in
-Windows ANSI, you must supply an external font. Dompdf will embed any referenced
-font in the PDF so long as it has been pre-loaded or is accessible to dompdf and
-reference in CSS @font-face rules. See the
-[font overview](https://github.com/dompdf/dompdf/wiki/About-Fonts-and-Character-Encoding)
-for more information on how to use fonts.
+---
 
-The [DejaVu TrueType fonts](https://dejavu-fonts.github.io/) have been pre-installed
-to give dompdf decent Unicode character coverage by default. To use the DejaVu
-fonts reference the font in your stylesheet, e.g. `body { font-family: DejaVu
-Sans; }` (for DejaVu Sans). The following DejaVu 2.34 fonts are available:
-DejaVu Sans, DejaVu Serif, and DejaVu Sans Mono.
+## 🛠️ Technologies Used
 
-## Easy Installation
+| Technology     | Purpose                                           |
+| -------------- | ------------------------------------------------- |
+| **PHP**        | Backend development and server-side functionality |
+| **MySQL**      | Database management and data storage              |
+| **HTML**       | Structure of web pages                            |
+| **CSS**        | Styling and page design                           |
+| **JavaScript** | Client-side functionality and interaction         |
+| **Bootstrap**  | Responsive user interface                         |
+| **AI API**     | Resume and job skill matching                     |
+| **Dompdf**     | Generating resumes in PDF format                  |
+| **XAMPP**      | Local development environment                     |
+| **phpMyAdmin** | Database administration                           |
 
-### Install with composer
+---
 
-To install with [Composer](https://getcomposer.org/), simply require the
-latest version of this package.
+## 🗄️ Database
+
+The project uses **MySQL** as its relational database.
+
+Database name:
+
+```text
+resumebuilder
+```
+
+The database stores information related to:
+
+* Users
+* Job Seekers
+* Employers
+* Resumes
+* Education
+* Experience
+* Skills
+* Projects
+* Certifications
+* Jobs
+* Job Applications
+* Resume Analysis
+
+The SQL database file is included in this repository.
+
+---
+
+## 🔄 AI Resume Analysis Workflow
+
+```text
+Candidate Resume
+       ↓
+Resume Skills
+       ↓
+Job Required Skills
+       ↓
+AI Analysis
+       ↓
+Match Percentage
+       ↓
+Matched Skills + Missing Skills
+       ↓
+Improvement Suggestions
+```
+
+---
+
+## 📄 Resume PDF Generation
+
+The system allows job seekers to generate professional resumes in PDF format.
+
+**Dompdf** is used to convert HTML-based resume templates into downloadable PDF documents.
+
+---
+
+## 📁 Project Structure
+
+```text
+Smart-Resume-Analyzer-Job-Portal/
+│
+├── ai_match.php
+├── analyze_resume.php
+├── applicants.php
+├── apply_job.php
+├── apply_jobs.php
+├── create_cv.php
+├── cv_status.php
+├── dashboard.php
+├── db.php
+├── edashboard.php
+├── edit_cv.php
+├── elogin.php
+├── eregister.php
+├── generate_pdf.php
+├── index.php
+├── login.php
+├── logout.php
+├── my_applications.php
+├── my_jobs.php
+├── post_job.php
+├── preview.php
+├── profile.php
+├── register.php
+│
+├── advanced.php
+├── modern.php
+├── simple.php
+│
+├── advanced_pdf.php
+├── modern_pdf.php
+├── simple_pdf.php
+│
+├── api.php
+├── db.php
+├── resumebuilder.sql
+│
+└── README.md
+```
+
+---
+
+## ⚙️ Installation and Setup
+
+### 1. Install XAMPP
+
+Install XAMPP with:
+
+* Apache
+* MySQL
+* phpMyAdmin
+
+### 2. Clone the Repository
 
 ```bash
-composer require dompdf/dompdf
+git clone https://github.com/bismafarheen65-hub/Smart-Resume-Analyzer-Job-Portal.git
 ```
 
-Make sure that the autoload file from Composer is loaded.
+### 3. Move the Project
 
-```php
-// somewhere early in your project's loading, require the Composer autoloader
-// see: http://getcomposer.org/doc/00-intro.md
-require 'vendor/autoload.php';
+Copy the project folder into:
+
+```text
+C:\xampp\htdocs\
 ```
 
-### Download and install
+### 4. Start XAMPP
 
-Download a packaged archive of dompdf and extract it into the 
-directory where dompdf will reside
+Open XAMPP Control Panel and start:
 
- * You can download stable copies of dompdf from
-   https://github.com/dompdf/dompdf/releases
- * Or download a nightly (the latest, unreleased code) from
-   http://eclecticgeek.com/dompdf
-
-Use the packaged release autoloader to load dompdf, libraries,
-and helper functions in your PHP:
-
-```php
-// include autoloader
-require_once 'dompdf/autoload.inc.php';
+```text
+Apache
+MySQL
 ```
 
-Note: packaged releases are named according using semantic
-versioning (_dompdf_MAJOR-MINOR-PATCH.zip_). So the 1.0.0 
-release would be dompdf_1-0-0.zip. This is the only download
-that includes the autoloader for Dompdf and all its dependencies.
+### 5. Create the Database
 
-### Install with git
+Open phpMyAdmin:
 
-From the command line, switch to the directory where dompdf will
-reside and run the following commands:
-
-```sh
-git clone https://github.com/dompdf/dompdf.git
-cd dompdf/lib
-
-git clone https://github.com/PhenX/php-font-lib.git php-font-lib
-cd php-font-lib
-git checkout 0.5.1
-cd ..
-
-git clone https://github.com/PhenX/php-svg-lib.git php-svg-lib
-cd php-svg-lib
-git checkout v0.3.2
-cd ..
-
-git clone https://github.com/sabberworm/PHP-CSS-Parser.git php-css-parser
-cd php-css-parser
-git checkout 8.1.0
+```text
+http://localhost/phpmyadmin
 ```
 
-Require dompdf and it's dependencies in your PHP.
-For details see the [autoloader in the utils project](https://github.com/dompdf/utils/blob/master/autoload.inc.php).
+Create a database named:
 
-## Framework Integration
-
-* For Symfony: [nucleos/dompdf-bundle](https://github.com/nucleos/NucleosDompdfBundle)
-* For Laravel: [barryvdh/laravel-dompdf](https://github.com/barryvdh/laravel-dompdf)
-* For Redaxo: [PdfOut](https://github.com/FriendsOfREDAXO/pdfout)
-
-## Quick Start
-
-Just pass your HTML in to dompdf and stream the output:
-
-```php
-// reference the Dompdf namespace
-use Dompdf\Dompdf;
-
-// instantiate and use the dompdf class
-$dompdf = new Dompdf();
-$dompdf->loadHtml('hello world');
-
-// (Optional) Setup the paper size and orientation
-$dompdf->setPaper('A4', 'landscape');
-
-// Render the HTML as PDF
-$dompdf->render();
-
-// Output the generated PDF to Browser
-$dompdf->stream();
+```text
+resumebuilder
 ```
 
-### Setting Options
+Import the SQL file included in the repository.
 
-Set options during dompdf instantiation:
+### 6. Configure Database Connection
 
-```php
-use Dompdf\Dompdf;
-use Dompdf\Options;
+Update the database credentials in:
 
-$options = new Options();
-$options->set('defaultFont', 'Courier');
-$dompdf = new Dompdf($options);
+```text
+db.php
 ```
 
-or at run time
+according to your local MySQL configuration.
 
-```php
-use Dompdf\Dompdf;
+### 7. Configure AI API
 
-$dompdf = new Dompdf();
-$options = $dompdf->getOptions();
-$options->setDefaultFont('Courier');
-$dompdf->setOptions($options);
+Add your own API credentials in the API configuration file.
+
+**Do not upload or expose your API key on GitHub.**
+
+### 8. Run the Project
+
+Open the project through XAMPP in your browser:
+
+```text
+http://localhost/Smart-Resume-Analyzer-Job-Portal/
 ```
 
-See [Dompdf\Options](src/Options.php) for a list of available options.
-
-### Resource Reference Requirements
-
-In order to protect potentially sensitive information Dompdf imposes 
-restrictions on files referenced from the local file system or the web. 
-
-Files accessed through web-based protocols have the following requirements:
- * The Dompdf option "isRemoteEnabled" must be set to "true"
- * PHP must either have the curl extension enabled or the 
-   allow_url_fopen setting set to true
-   
-Files accessed through the local file system have the following requirement:
- * The file must fall within the path(s) specified for the Dompdf "chroot" option
-
-## Limitations (Known Issues)
-
- * Table cells are not pageable, meaning a table row must fit on a single page: See https://github.com/dompdf/dompdf/issues/98
- * Elements are rendered on the active page when they are parsed.
- * Embedding "raw" SVG's (`<svg><path...></svg>`) isn't working yet: See https://github.com/dompdf/dompdf/issues/320  
-   Workaround: Either link to an external SVG file, or use a DataURI like this:
-     ```php
-     $html = '<img src="data:image/svg+xml;base64,' . base64_encode($svg) . '">';
-     ```
- * Does not support CSS flexbox: See https://github.com/dompdf/dompdf/issues/971
- * Does not support CSS Grid: See https://github.com/dompdf/dompdf/issues/2988
- * A single Dompdf instance should not be used to render more than one HTML document
-   because persisted parsing and rendering artifacts can impact future renders.
 ---
 
-[![Donate button](https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif)](http://goo.gl/DSvWf)
+## 🎯 Project Objectives
 
-*If you find this project useful, please consider making a donation.
-Any funds donated will be used to help further development on this project.)*
+* Develop a centralized online recruitment platform.
+* Provide professional resume creation and management.
+* Allow employers to post and manage job vacancies.
+* Allow candidates to search and apply for jobs.
+* Store recruitment data using a relational database.
+* Implement database CRUD operations.
+* Provide AI-assisted resume analysis.
+* Compare candidate skills with job requirements.
+* Identify missing skills.
+* Provide resume improvement suggestions.
+* Generate professional resumes in PDF format.
+
+---
+
+## 🌱 Sustainable Development Goals
+
+### SDG 4 — Quality Education
+
+Helps students and job seekers improve their resumes and career readiness.
+
+### SDG 8 — Decent Work and Economic Growth
+
+Supports job searching, recruitment, and employment opportunities.
+
+### SDG 9 — Industry, Innovation and Infrastructure
+
+Uses web technologies, databases, PDF generation, and AI to provide a digital recruitment solution.
+
+---
+
+## 🎓 Academic Project
+
+**Project:** Smart Resume Analyzer & Job Portal
+**Course:** Database Systems
+**Department:** Computer Engineering
+**University:** COMSATS University Islamabad – Abbottabad Campus
+**Semester:** Spring 2026
+
+### Team Members
+
+* Bisma Farheen
+* Azka Kabir
+* Fizza Razzaq
+
+---
+
+## 📸 Screenshots
+
+Screenshots of the following modules can be added to this README:
+
+* Home Page
+* Registration and Login
+* Job Seeker Dashboard
+* Employer Dashboard
+* Resume Builder
+* Resume Templates
+* Resume Preview
+* Job Listings
+* Job Application
+* AI Resume Analysis
+* Generated Resume PDF
+
+---
+
+## 🚀 Future Enhancements
+
+* Advanced AI resume parsing
+* Intelligent candidate ranking
+* Email notifications
+* Advanced job filtering
+* Interview scheduling
+* Online deployment
+* Mobile application
+* Enhanced authentication and security
+
+---
+
+## ⭐ Project
+
+If you find this project useful, consider giving the repository a ⭐ star.
