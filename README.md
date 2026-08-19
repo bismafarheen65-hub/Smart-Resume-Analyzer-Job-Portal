@@ -309,23 +309,6 @@ Uses web technologies, databases, PDF generation, and AI to provide a digital re
 
 ---
 
-## 📸 Screenshots
-
-Screenshots of the following modules can be added to this README:
-
-* Home Page
-* Registration and Login
-* Job Seeker Dashboard
-* Employer Dashboard
-* Resume Builder
-* Resume Templates
-* Resume Preview
-* Job Listings
-* Job Application
-* AI Resume Analysis
-* Generated Resume PDF
-
----
 
 ## 🚀 Future Enhancements
 
